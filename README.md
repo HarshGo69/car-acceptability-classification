@@ -17,15 +17,15 @@ A machine learning project that predicts a car's acceptability rating (unaccepta
 - Visualized class distribution, safety vs class, feature importance, and confusion matrix
 
 ## Results
-| Model | Accuracy | F1 Score |
-|---|---|---|
-| Logistic Regression | X.XX | X.XX |
-| Random Forest | X.XX | X.XX |
+| Model | Accuracy | Precision | Recall | F1 Score |
+|---|---|---|---|---|
+| Logistic Regression | 0.688 | 0.575 | 0.688 | 0.609 |
+| Random Forest | 0.983 | 0.983 | 0.983 | 0.983 |
 
-Cross-validation average accuracy: X.XX
+5-fold cross-validation average accuracy: 0.815
 
 ## Key finding
-Safety and passenger capacity were the strongest predictors of acceptability, while doors and luggage boot size had comparatively less influence.
+Random Forest substantially outperformed Logistic Regression, likely because the relationship between features like safety and price tiers and the acceptability class isn't linear, something tree-based models capture better. Safety (0.28) and passenger capacity (0.22) were the strongest predictors, while doors (0.07) had the least influence.
 
 ## Tools
 Python, Pandas, NumPy, scikit-learn, Matplotlib, Seaborn
@@ -33,4 +33,4 @@ Python, Pandas, NumPy, scikit-learn, Matplotlib, Seaborn
 ## How to run
 1. Clone this repo
 2. Install dependencies: `pip install pandas numpy scikit-learn matplotlib seaborn`
-3. Open `Scikeit_learn.ipynb` in Jupyter and run all cells
+3. Open the notebook in Jupyter and run all cells
